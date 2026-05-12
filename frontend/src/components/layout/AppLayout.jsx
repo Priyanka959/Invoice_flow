@@ -83,9 +83,6 @@ const AppLayout = () => {
           <div className="flex items-center gap-4">
             <div className="text-right">
               <p className="text-sm font-semibold">{user?.fullName}</p>
-              <p className={`text-[10px] uppercase tracking-wider font-bold ${user?.role === 'ADMIN' ? 'text-amber-500' : 'text-slate-400'}`}>
-                {user?.role}
-              </p>
             </div>
           </div>
         </header>

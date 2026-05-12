@@ -38,7 +38,6 @@ public class AuthService {
         return LoginResponse.builder()
                 .token(jwtToken)
                 .username(user.getUsername())
-                .role(user.getRole().name())
                 .fullName(user.getFullName())
                 .expiresIn(jwtExpiration)
                 .build();
