@@ -29,7 +29,7 @@ const NewInvoicePage = () => {
   const [selectedCustomer, setSelectedCustomer] = useState(null);
   const [invoiceDate, setInvoiceDate] = useState(new Date().toISOString().split('T')[0]);
   const [items, setItems] = useState([]); // { product, quantity }
-  const [supplyType] = useState('INTRA_STATE');
+  const [supplyType] = useState('INTER_STATE');
   const [remarks, setRemarks] = useState('');
   const [isCustomerModalOpen, setIsCustomerModalOpen] = useState(false);
   const [isProductQtyModalOpen, setIsProductQtyModalOpen] = useState(false);

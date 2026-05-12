@@ -28,12 +28,11 @@ export const useInvoiceCalculator = (items, supplyType) => {
     const totalGst = Object.values(gstGroups).reduce((acc, group) => acc + group.gst, 0);
     
     const gstSummary = Object.values(gstGroups).map(group => {
-      const isIntra = supplyType === 'INTRA_STATE';
       return {
         ...group,
-        cgst: isIntra ? group.gst / 2 : 0,
-        sgst: isIntra ? group.gst / 2 : 0,
-        igst: !isIntra ? group.gst : 0
+        cgst: 0,
+        sgst: 0,
+        igst: group.gst
       };
     });
 

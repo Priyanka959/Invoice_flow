@@ -43,9 +43,9 @@ public class GstCalculationService {
                     .map(InvoiceItem::getGstAmount)
                     .reduce(BigDecimal.ZERO, BigDecimal::add);
 
-            BigDecimal cgst = totalGstForSlab.divide(BigDecimal.valueOf(2), 2, RoundingMode.HALF_UP);
-            BigDecimal sgst = totalGstForSlab.subtract(cgst);
-            BigDecimal igst = BigDecimal.ZERO;
+            BigDecimal cgst = BigDecimal.ZERO;
+            BigDecimal sgst = BigDecimal.ZERO;
+            BigDecimal igst = totalGstForSlab;
 
             slabs.add(GstSlabSummary.builder()
                     .gstRate(rate)

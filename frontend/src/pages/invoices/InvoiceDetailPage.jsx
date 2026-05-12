@@ -130,7 +130,7 @@ const InvoiceDetailPage = () => {
               <div className="flex gap-12">
                  <div>
                     <h4 className="text-[10px] font-mono font-bold uppercase tracking-widest text-navy-700 mb-2">Protocol</h4>
-                    <Badge variant={invoice.supplyType === 'INTRA_STATE' ? 'info' : 'warning'}>{invoice.supplyType}</Badge>
+                    <Badge variant="warning">{invoice.supplyType}</Badge>
                  </div>
                  <div>
                     <h4 className="text-[10px] font-mono font-bold uppercase tracking-widest text-navy-700 mb-2">Cashier</h4>
